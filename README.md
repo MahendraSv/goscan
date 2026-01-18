@@ -24,3 +24,13 @@ age := in.Int("Age: ")
 - Type-safe parsing
 - Retry on invalid input
 - CLI-friendly
+
+
+### Why This Is Idiomatic Go (Even With Generics)
+| Feature                  | Value |
+| ------------------------ | ----- |
+| Compile-time type safety | ✅     |
+| No reflection            | ✅     |
+| Simple API               | ✅     |
+| Reusable parsing logic   | ✅     |
+| Go-style error loops     | ✅     |
