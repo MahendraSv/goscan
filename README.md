@@ -1,5 +1,13 @@
 # goscan
 
+Let’s build a custom input utility in Go, similar to Java’s Scanner, that is:
+
+- ✅ Easy to use
+- ✅ Type-safe
+- ✅ Handles spaces & newlines
+- ✅ Centralized error handling
+- ✅ Suitable for real projects & competitive programming
+
 A simple Java-like Scanner utility for Go.
 
 ## Installation
@@ -8,7 +16,7 @@ A simple Java-like Scanner utility for Go.
 go get github.com/MahendraSv/goscan
 ```
 
-## usage
+## Usage
 
 ```
 import "github.com/MahendraSv/goscan/scanner"
@@ -34,3 +42,20 @@ age := in.Int("Age: ")
 | Simple API               | ✅     |
 | Reusable parsing logic   | ✅     |
 | Go-style error loops     | ✅     |
+
+## Run Tests
+
+From the module root:
+```
+go test ./...
+```
+
+Expected output:
+```
+ok   github.com/MahendarSv/goscan/scanner  0.00Xs
+```
+
+### Coverage
+``` go
+go test -cover ./...
+```

@@ -3,6 +3,7 @@ package scanner
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
 	"strings"
@@ -12,12 +13,21 @@ type Scanner struct {
 	reader *bufio.Reader
 }
 
+// New Default constructor → keyboard input
 func New() *Scanner {
 	return &Scanner{
 		reader: bufio.NewReader(os.Stdin),
 	}
 }
 
+// NewFromReader Generic Constructor - any input source
+func NewFromReader(r io.Reader) *Scanner {
+	return &Scanner{
+		reader: bufio.NewReader(r),
+	}
+}
+
+// Internal helper
 func (s *Scanner) readLine(prompt string) string {
 	if prompt != "" {
 		fmt.Print(prompt)
